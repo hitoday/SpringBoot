@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content = "text/html; charset = UTF-8">
+    <title>새글등록</title>
+</head>
+
+<body th:align="center">
+<h3>새글 등록하기</h3>
+
+<hr>
+<form action = "getBoard" method = "POST">
+    <table border="1" th:cellpadding="0" th:cellspacing="0">
+    <tr>
+        <td bgcolor="gray" th:text = "제목" width = "70" align = "left"></td>
+        <td><input name = "title" type = "text" th:value="${board.title}"></td>
+    </tr>
+
+    <tr>
+        <td bgcolor="gray" th:text = "작성자" align = "left">
+        <input type = "text" name = "writer" size = "10"></td>
+    </tr>
+    <tr>
+        <td bgcolor="gray" th:text = "내용" align = "left">
+        <td><textarea name = "content" cols = "40" rows = "10"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2" align = "center">
+            <input type = "submit" value = "새글 등록"></td>
+    </tr>
+
+</table>
+</form>
+<hr>
+</center>
+</body>
+</html>
